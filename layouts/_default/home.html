@@ -9,7 +9,9 @@
         <h1>{{ .Site.Data.profile.name }}</h1>
         <h2>{{ .Site.Data.profile.role }}</h2>
       </span>
-      <p>{{ .Site.Data.profile.slogan }}</p>
+      <div class="intro">
+        {{ .Site.Data.profile.intro | markdownify }}
+      </div>
       <div class="socials">
         {{ range .Site.Data.profile.socials }}
           {{ if eq .name "Email" }}
