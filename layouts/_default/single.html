@@ -6,6 +6,7 @@
     {{ .Content }} 
   </section>
   {{ else if eq .Layout "about" }}
+  <a href="{{ .Params.pdflink }}">PDF version</a>
   <section class="about">{{ .Content }}</section>
   {{ else if eq .Layout "project" }} {{ partial "common/toc.html" (dict "title"
   "On This Page" "page" .) }}
